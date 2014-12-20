@@ -1,15 +1,15 @@
 
 """
 What's lexical analysis? 
-  The first phase of a compiler is called lexical analysis or scanning. The lex­ical analyzer reads the stream of characters making up the source program
-and groups the characters into meaningful sequences called lexemes. - From Dragon's Book.
+  The first phase is called lexical analysis or scanning. The lexical analyzer reads the stream of characters making up the source program
+and groups the characters into meaningful sequences called lexemes. - Dragon's Book.
 
   Well, there are so many ways to tokenize things out in Python, using the version of Lex-Yacc to Python (http://www.dabeaz.com/ply/), 
 simulating a NFA (user xysun wrote a beautiful implementation of Thompson's algorithm: https://github.com/xysun/regex), the re module (here's the trick: http://effbot.org/zone/xml-scanner.htm), 
 or writing by hand.
 """
 
-# An simple example by hand (regex for identifiers -> [a-zA-Z][a-zA-Z0-9]*):
+# A simple example by hand (regex for identifiers -> [a-zA-Z][a-zA-Z0-9]*):
 if char.isalpha(): # [a-zA-Z]
 	sbuffer = []
 	while char.isalpha() or char.isdigit(): # [a-zA-Z0-9]*
