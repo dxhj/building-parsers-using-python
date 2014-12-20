@@ -1,4 +1,4 @@
-building-parsers-python
+building-parsers-using-python
 =======================
 
 Learn how to use PLY and recursive-descent methods.
