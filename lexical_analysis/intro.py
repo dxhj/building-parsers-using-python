@@ -25,6 +25,6 @@ if char.isdigit(): # [0-9]
 		char = nextchar()
 	return Num(num, INT) # Num<VALUE, INT>
 
-# This way can be simple and don't need any module, but how grows the necessity to tokenize more kind of tokens it can be troublesome.
+# This way can be simple and doesn't need any module, but how grows the necessity to tokenize more kind of tokens it can be troublesome.
 # In the next tutorial we're going to study it.
 
