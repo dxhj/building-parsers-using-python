@@ -1,3 +1,6 @@
+# this is a simple implementation of Thompson's algorithm (learning purpose), you're free to update it and make it better.
+# supports: Kleene star, plus rep, dot, character classes (just ranges like [a-z], [a-zA-Z]), alternation, and concatenation. 
+
 from collections import namedtuple
 
 class State(object):
