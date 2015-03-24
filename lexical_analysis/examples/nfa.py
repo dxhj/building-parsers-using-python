@@ -107,7 +107,6 @@ class Parser(object):
 			self.consume("RIGHTB")
 
 def create_nfa(r):
-	tokens = Parser(r).tokens
 	stack = []
 	for t in Parser(r).tokens:
 		if t.type in ["CHAR", "RANGE"]:
