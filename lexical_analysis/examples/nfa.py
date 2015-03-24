@@ -148,6 +148,3 @@ def create_nfa(r):
 			n1.start.e_transitions.append(n1.end)
 			stack.append(n1)
 	return stack.pop()
-
-
-print create_nfa("(a+)?").accepts("")
