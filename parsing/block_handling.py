@@ -85,7 +85,6 @@ class BlockParser(object):
 			self.block_body()
 
 	def decl(self):
-		# decl -> type id ASSIGN expr
 		self.match("INT") 
 		lexeme = self.lookahead[1]
 		self.match("ID")
@@ -96,7 +95,6 @@ class BlockParser(object):
 		self.match("SEMI_COLON")
 
 	def id(self):
-		# id -> ID
 		s = self.top.get(self.lookahead[1])
 		if s is None:
 			raise NameError("{} is not defined".format(self.lookahead[1]))
