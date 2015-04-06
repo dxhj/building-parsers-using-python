@@ -4,6 +4,8 @@ class Env(object):
 		self.prev = prev 
 
 	def put(self, symbol):
+		if symbol.lexeme in self.table:
+			raise NameError("variable {} already exists".format(symbol.lexeme))
 		self.table[symbol.lexeme] = symbol
 
 	def get(self, idt):
