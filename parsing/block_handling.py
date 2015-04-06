@@ -98,12 +98,10 @@ class BlockParser(object):
 	def id(self):
 		# id -> ID
 		s = self.top.get(self.lookahead[1])
-		self.match("ID")
 		if s is None:
-			raise NameError
+			raise NameError("{} is not defined".format(self.lookahead[1]))
+		self.match("ID")
 		print "(", s.lexeme, ":", s.type, "->", s.value, ")",	
-		return s
-
 
 b = BlockParser()
 
