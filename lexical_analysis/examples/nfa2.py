@@ -15,11 +15,11 @@ def create_nfa(states, accepting):
 def match(inpt, nfa):
 	states = [0]
 	for i in inpt:
-		next = []
+		nexts = []
 		for s in states: 
 			if (i,s) in nfa[0]:
-				next.extend(nfa[0][i, s])
-		states = next
+				nexts.extend(nfa[0][i, s])
+		states = nexts
 	if [e for e in states if e in nfa[1]]:
 		return True
 
