@@ -1,9 +1,7 @@
-building-parsers-using-python
+stuff-about-parsing
 =======================
 
-Learn how to build parsers using PLY and others methods.
-
-This tutorial has as great idea to teach you the basics of parsing, how to parse simple expressions to simple statements, how to build parse trees and so on.
+Here there are some prototypes (I mean it) about parsing in general.
 
 I hope it can be useful.
 
