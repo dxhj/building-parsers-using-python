@@ -31,7 +31,8 @@ class NFA(object):
 				if ch in state.transitions:
 					self.e_closure(state.transitions[ch], next_states)
 				elif "RANGE" in state.transitions:
-					if ch in state.transitions["RANGE"][1]:
+					ord_c = ord(ch)
+					if ord_c <= state.transitions["RANGE"][1][0] or ord_c <= state.transitions["RANGE"][1][1]:
 						self.e_closure(state.transitions["RANGE"][0], next_states)
 				elif "." in state.transitions:
 					self.e_closure(state.transitions["."], next_states)
@@ -88,11 +89,17 @@ class Parser(object):
 		t0 = ord(self.consume("CHAR").lexeme)
 		self.consume("SEP")
 		t1 = ord(self.consume("CHAR").lexeme)
-		for dec in xrange(t0, t1+1):
-			l.append(chr(dec))
+		if t0 > t1:
+			raise ValueError("character classes must be in the form [MIN_CHAR-MAX_CHAR]")
+		if l:
+			if t0 < l[0]: l[0] = t0
+			if t1 > l[1]: l[1] = t1
+		else:
+			l.extend([t0, t1])
 		if self.current.type == "CHAR":
 			return self.option(l)
 		return l
+
 
 	def last(self):
 		if self.current.type == "LEFTP":
