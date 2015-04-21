@@ -126,7 +126,7 @@ def create_nfa(r):
 		elif t.type == "ALT":
 			n2 = stack.pop()
 			n1 = stack.pop()
-			s0 = State(state_n)
+			s0 = State()
 			s0.e_transitions.extend([n1.start, n2.start])
 			s1 = State()
 			n1.end.e_transitions.append(s1)
