@@ -1,4 +1,3 @@
-# This is surely not the best implementation. (hahaha)
 # Supports: Kleene star, plus rep., dot, character classes (just ranges like [a-z], [a-zA-Z]), alternation, and concatenation. 
 
 from collections import namedtuple
