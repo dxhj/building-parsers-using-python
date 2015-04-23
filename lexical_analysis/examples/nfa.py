@@ -94,7 +94,7 @@ class Parser(object):
 			if t0 < l[0]: l[0] = t0
 			if t1 > l[1]: l[1] = t1
 		else:
-			l.extend([t0, t1])
+			l = [t0, t1]
 		if self.current.type == "CHAR":
 			return self.option(l)
 		return l
