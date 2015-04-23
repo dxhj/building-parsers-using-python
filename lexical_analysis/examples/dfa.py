@@ -1,8 +1,8 @@
 # construct an NFA and by subset construction an equivalent DFA, simulate by this approach:
 
-def simulate(input, dfa, start, accepting):
+def simulate(inputs, dfa, start, accepting):
   s = start
-  for c in input:
+  for c in inputs:
     try:
       s = dfa[s,c]
     except KeyError:
