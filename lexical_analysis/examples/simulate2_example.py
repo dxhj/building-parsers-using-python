@@ -36,4 +36,3 @@ while True:
 	print tokens
 	print spaces
 	
-# in practice, we'll probably be using a parser, the parser needs input tokens as soon as possible (parser and lexical analyser running together), consider the use of a generator.
