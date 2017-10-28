@@ -1,7 +1,7 @@
-stuff-about-parsing
+stuff-about-compilers
 =======================
 
-Here there are some prototypes (I mean it) about parsing in general.
+Here there are some prototypes (I mean it) about compilers in general.
 
 I hope it can be useful.
 
